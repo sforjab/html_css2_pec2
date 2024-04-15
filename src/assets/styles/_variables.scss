@@ -10,3 +10,10 @@ $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
+
+$col-gray: rgb(93, 95, 121);
+$col-white: rgb(255, 255, 255);
+$col-orange: rgb(245, 157, 35);
+$col-black: rgb(0,0,0); 
+
+$footer-bg: invert-color($col-gray);
