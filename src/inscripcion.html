@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+        <title>Formulario de inscripción</title>
+    </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <div class="container mt-5 text-center">
+            <div class="container__titulo"><h1>Formulario de inscripción</h1></div>
+            <form class="container__form mx-auto">
+              <div class="row">
+                <div class="form-group mb-3">
+                  <label for="dni">DNI</label>
+                  <input type="text" class="form-control" id="dni" name="dni">
+                </div>
+                <div class="form-group mb-3  col-md-6">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="form-group mb-3 col-md-6">
+                  <label for="apellidos">Apellidos</label>
+                  <input type="text" class="form-control" id="apellidos" name="apellidos">
+                </div>
+                <div class="form-group mb-3 col-md-6">
+                  <label for="localidad">Localidad</label>
+                  <input type="text" class="form-control" id="localidad" name="localidad">
+                </div>
+                <div class="form-group mb-3  col-md-6">
+                  <label for="provincia">Provincia</label>
+                  <input type="text" class="form-control" id="provincia" name="provincia">
+                </div>
+                <div class="form-group mb-3  col-md-4">
+                  <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                  <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+                <div class="form-group mb-3  col-md-4">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group mb-3  col-md-4">
+                  <label for="email">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="profesion_cocina">¿Te dedicas o has dedicado profesionalmente a la cocina?</label>
+                    <select class="form-select" id="profesion_cocina" name="profesion_cocina">
+                        <option selected disabled>Seleccione una opción...</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>                
+                <div class="form-group mb-3">
+                  <label for="opciones">¿Cómo conociste el concurso?</label>
+                  <select class="form-select" id="opciones" name="opciones">
+                      <option selected disabled>Seleccione una opción...</option>
+                      <option value="Internet">Internet</option>
+                      <option value="Televisión">Televisión</option>
+                      <option value="Radio">Radio</option>
+                      <option value="Mediante algún conocido">Mediante algún conocido</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        <include src="./views/footer.html"></include>
+    </body>
+</html>
