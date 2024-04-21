@@ -9,16 +9,24 @@
   </head>
   <body>
     <include src="./views/header.html"></include>
-    <main>
-      <h1>Tycho</h1>
-      <h2>Artist Spotlight</h2>
-      <hr>
-      <p class="about">Tycho is an American ambient music project led by Scott Hansen as primary composer, songwriter and producer. Hailing from San Francisco, California, he is known as ISO50 for his photographic and design works. His music is a combination of downtempo vintage-style synthesizers and ambient melodies.</p>
-      <img src="/src/assets/images/imagen-portada.png" alt="Tycho Live at Toronto">
-      <div class="location">
-        <p>10.2.2010 Toronto<br>The Drake Hotel</p>
+    <main class="main">
+      <div class="main__imagen">
+        <figure class="main__imagen__figure">
+          <img class="main__imagen__figure__img" src="./assets/images/imagen-portada.png" alt="Imagen de portada">
+        </figure>
       </div>
-      <button type="button">Tour dates</button>
+      <div class="main__texto-lateral1">
+        <h1>CONCURSO DE COCINA</h1>
+      </div>
+      <div class="main__texto-lateral2">
+        <h3>COMARCA DE LA JANDA 2024</h3>
+      </div>
+      <div class="main__texto-inferior1">
+        <h4>Medina Sidonia (Cádiz)</h4>
+      </div>
+      <div class="main__texto-inferior2">
+        <h4>Del 10 al 12 de mayo</h4>
+      </div>
     </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

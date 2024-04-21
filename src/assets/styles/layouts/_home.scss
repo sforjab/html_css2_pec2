@@ -59,6 +59,7 @@
 .header {
   border-bottom: 1px solid black;
   margin-top: 1rem;
+  height: 10vh;
 
   .header__container {
     display: flex;
@@ -86,6 +87,76 @@
   }
 }
 
+@supports (display:grid) {
+  @media (min-width: 42em) and (min-height: 27em) {
+    main {
+        display: grid; 
+        grid-template: 20vh 20vh 20vh 10vh 5vh / 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px;
+        height: auto;
+    }
+
+    .main__imagen, .main__texto-lateral1, .main__texto-lateral2, .main__texto-inferior1, .main__texto-inferior2 {
+      height: 100%;
+    }
+
+    .main__imagen {
+      grid-row: 1 / 4;
+      grid-column: 1 / 5;
+      overflow: hidden;
+    }
+
+    .main__texto-lateral1, .main__texto-lateral2  {
+      display: flex;
+      background-color: #00a01a; 
+      grid-column: 5 / 6;  
+      text-align: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .main__texto-lateral1 {
+      grid-row: 1 / 2;
+      color: $col-white;
+      border-bottom: 1px solid $col-white;
+    }
+    
+    .main__texto-lateral2 {
+      grid-row: 2 / 3;
+      font-weight: bold;
+      color: $col-black;
+    }
+
+    .main__texto-inferior1, .main__texto-inferior2 {
+      display: flex;
+      background-color: #02b4da; 
+      grid-row: 4 / 5;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .main__texto-inferior1 {
+      grid-column: 2 / 3;
+      border-right: 1px solid $col-white;
+      color: $col-white;
+    }
+
+    .main__texto-inferior2 {
+      grid-column: 3 / 4;
+      color: $col-black;
+    }
+
+    .main__imagen__figure {
+      margin-bottom: 0;
+    }
+
+    .main__imagen__figure__img {
+      width: 100%;
+    }
+  }
+}
+
 /* .uoc-logo {
   display: block;
   margin-left: auto;
@@ -110,27 +181,44 @@
   }
 } */
 
-.uoc-footer {
+/* .uoc-footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
-}
+} */
 
 /* @supports (display:grid) {
   @media (min-width: 42em) and (min-height: 27em) {
     main {
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          ". . . ."
-          "img-portada img-portada img-portada img-portada"
-          "img-portada img-portada img-portada img-portada"
-          "img-portada img-portada img-portada img-portada"
-          "lugar-fecha lugar-fecha . ."
-          ". . . ."; 
+				
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        
+        gap: 0px;
+        height: 100%;
     }
+
+    #item-0 {
+      background-color: #69768C; 
+      grid-row: 1 / 6;
+      grid-column: 1 / 6;
+      
+    }
+    #item-1 {
+
+      background-color: #5AD758; 
+      grid-row: 1 / 4;
+      grid-column: 6 / 7;
+      
+    }
+    #item-2 {
+
+      background-color: #8DDD9E; 
+      grid-row: 6 / 7;
+      grid-column: 3 / 6;
+      
+    }
+
     .img-portada { grid-area: img-portada; }
       .lugar-fecha { grid-area: lugar-fecha; }
 
@@ -205,56 +293,61 @@
 
  /* Pie de página */
 .container__footer {
-  padding: 0;
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   text-align: center;
-  height: 10vh;
+  /* height: 10vh; */
   border-top: 1px solid $col-black;
-  padding-top: 2rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  align-items: center;
 }
 
-.footer__logo,
+/* .footer__logo,
 .footer__links,
 .footer__rrss {
     flex: 1;
 }
-
+ */
 .footer__logo {
-  align-self: flex-start; /* Alinea la imagen al inicio del contenedor */
+  align-self: flex-start;
 }
 
 .footer__links,
 .footer__rrss {
   display: flex;
-  justify-content: space-between; /* Distribuye los elementos equitativamente */
+  justify-content: space-between;
 }
+
+/* .footer__links {
+  width: 50%;
+} */
 
 .footer__logo_imagen {
-  width: 3rem;
+  width: 5rem;
 }
 
-.footer__links__lista {
+.footer__links__lista, .footer__rrss__lista {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-li.footer__links__elemento {
-  margin-right: 1rem;
+.footer__links__elemento:not(:last-child) {
+  margin-right: 4rem;
 }
 
 .footer__links__a {
   text-decoration: none;
 }
 
-.footer__rrss__lista {
-  display: flex;
-  list-style: none;
+.footer__rrss__imagen {
+  width: 1.5rem;
 }
 
-.footer__rrss__imagen {
-  width: 2rem;
+.footer__rrss__elemento:not(:last-child) {
+  margin-right: 1rem;
 }
 
 /* .container__footer {
