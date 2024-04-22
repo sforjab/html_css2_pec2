@@ -410,9 +410,12 @@
   width: 50%;
 }
 
+.container :is(.container__info-principal, .container__lista-ordenada) {
+  margin-bottom: 2rem;
+}
+
 .container__info-principal {
   display: flex;
-  margin-bottom: 2rem;
 }
 
 .container__info-titular {
@@ -425,20 +428,20 @@
   width: 67%;
 }
 
-.container__lista-ordenada {
-  margin-bottom: 2rem;
+.container__lista-ordenada__elemento {
+  line-height: 1.2rem;
+}
+
+.container :where(.container__blockquote, .container__imagen-articulo) {
+  margin: 2rem 0;
 }
 
 .container__blockquote {
   padding: 2rem;
-  margin: 2rem 0;
   background-color: #cfcac9;
   font-size: 1.5rem;
   text-align: center;
-}
-
-.container__imagen-articulo {
-  margin: 2rem 0;
+  border-radius: 2rem;
 }
 
 .container__imagen-articulo__img {
