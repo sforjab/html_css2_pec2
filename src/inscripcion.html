@@ -10,6 +10,7 @@
         <include src="./views/header.html"></include>
         <div class="container mt-5 text-center">
             <div class="container__titulo"><h1>Formulario de inscripción</h1></div>
+            <div id="liveAlertPlaceholder"></div>
             <form class="container__form mx-auto">
               <div class="row">
                 <div class="form-group mb-3">
@@ -63,8 +64,9 @@
                   </select>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
             </form>
         <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
     </body>
 </html>
