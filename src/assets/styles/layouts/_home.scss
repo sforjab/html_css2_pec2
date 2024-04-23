@@ -412,6 +412,18 @@
 .imagen-cabecera {
   height: 45vh;
   margin-bottom: 4%;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .imagen-cabecera__img {

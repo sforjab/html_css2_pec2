@@ -12,7 +12,11 @@ import * as bootstrap from 'bootstrap';
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializar el carrusel
+  var myCarousel = new Carousel(document.getElementById('carouselExampleInterval'), {
+      interval: 2000,
+      wrap: true
+  });
+});
+
