@@ -5,6 +5,7 @@
 
 import * as bootstrap from 'bootstrap';
 import { Carousel } from 'bootstrap';
+import 'animate.css';
 
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';

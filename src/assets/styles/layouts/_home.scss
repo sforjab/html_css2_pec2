@@ -38,17 +38,6 @@
   }
 }
 
-/* .uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-} */
-
 .html__list, .header__list {
   padding: 0;
   line-height: 1.5rem;
@@ -56,19 +45,15 @@
 }
 
 /* Contenedores */
-.navbar {
-  margin: 0 3rem;
+.container {
+  container-type: normal;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
+@container (min-width: 700px) {
+  .container__titulo {
+    width: 80%;
+  }
 }
-
-.navbar-expand-lg .navbar-collapse {
-  justify-content: end;
-}
-
 
 .header {
   border-bottom: 1px solid black;
@@ -275,6 +260,8 @@
 .container__titulo {
   margin: 2.5rem 0;
   text-align: center;
+  color: lch(51.18% 29 239.29);
+  
 }
 
 .container__participante__lista {
@@ -293,9 +280,9 @@
   text-align: center;
 }
 
-.container__participante__imagen {
+/* .container__participante__imagen {
   max-width: 100%;
-}
+} */
 
 .container__participante__nombre {
   font-size: 1.2rem;
@@ -489,4 +476,21 @@
 .container__form {
   width: 50%;
   margin: 3rem 0;
+  border: 3px solid color(display-p3 0.823 0.6554 0.2537 / 1);
+  padding: 2rem;
+  border-radius: 2rem;
 }
+
+//EN LOS QUE HE CAMBIADO CLASES DE BOOTSTRAP, MIRAR SI MODIFICO MEJOR LAS VARIABLES
+.form-control, .form-select {
+  background-color: hwb(0deg 100% 10%);
+}
+
+.form-group {
+  color: lab(31% -30 -50);
+}
+
+.alert-success {
+  color: oklch(52.06% 0.15 160.94);
+}
+
