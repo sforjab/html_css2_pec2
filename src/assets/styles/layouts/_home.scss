@@ -58,7 +58,7 @@
 .header {
   border-bottom: 1px solid black;
   margin-top: 1rem;
-  height: 10vh;
+  /* height: 10vh; */
 
   .header__container {
     display: flex;
@@ -156,106 +156,6 @@
   }
 }
 
-/* .uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
-} */
-
-/* .uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-} */
-
-/* .uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-} */
-
-/* @supports (display:grid) {
-  @media (min-width: 42em) and (min-height: 27em) {
-    main {
-        display: grid; 
-				
-        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        
-        gap: 0px;
-        height: 100%;
-    }
-
-    #item-0 {
-      background-color: #69768C; 
-      grid-row: 1 / 6;
-      grid-column: 1 / 6;
-      
-    }
-    #item-1 {
-
-      background-color: #5AD758; 
-      grid-row: 1 / 4;
-      grid-column: 6 / 7;
-      
-    }
-    #item-2 {
-
-      background-color: #8DDD9E; 
-      grid-row: 6 / 7;
-      grid-column: 3 / 6;
-      
-    }
-
-    .img-portada { grid-area: img-portada; }
-      .lugar-fecha { grid-area: lugar-fecha; }
-
-    h1 {
-      grid-column: 3 / 6;
-      grid-row: 1 / 2;
-      z-index: 2;
-      padding-left: 0.25em;
-      margin-bottom: initial;
-    }
-
-    img {
-      grid-column: 1 / 4;
-      grid-row: 1 / 4;
-    }
-
-    .location {
-      grid-column: 3 / 4;
-      grid-row: 3 / 4;
-      z-index: 2;
-      background: gray;
-      text-align: center;
-      display: flex;
-
-      p {
-        margin: auto;
-      }
-    }
-
-    button {
-      grid-column: 2 / 3;
-      grid-row: 4 / 5;
-      position: initial;
-      padding: 0;
-    }
-  }
-} */
-
 //PARTICIPANTES
 .container__titulo {
   margin: 2.5rem 0;
@@ -280,10 +180,6 @@
   text-align: center;
 }
 
-/* .container__participante__imagen {
-  max-width: 100%;
-} */
-
 .container__participante__nombre {
   font-size: 1.2rem;
 }
@@ -304,25 +200,15 @@
   align-items: center;
 }
 
-/* .footer__logo,
-.footer__links,
-.footer__rrss {
-    flex: 1;
-}
- */
 .footer__logo {
   align-self: flex-start;
 }
 
-.footer__links,
+//.footer__links
 .footer__rrss {
   display: flex;
   justify-content: space-between;
 }
-
-/* .footer__links {
-  width: 50%;
-} */
 
 .footer__logo_imagen {
   width: 5rem;
@@ -350,51 +236,6 @@
 .footer__rrss__elemento:not(:last-child) {
   margin-right: 1rem;
 }
-
-/* .container__footer {
-  text-align: center;
-  background-color: #fff;
-  display: flex;
-  justify-content: space-around;
-  height: 10vh;
-  border-top: 1px solid $col-black;
-  padding: 0;
-  width: 90%;
-  margin: auto;
-}
-
-  .footer__logo {
-    height: 100%;
-  }
-
-  .footer__logo_imagen {
-    -o-object-fit: cover;
-    object-fit: cover;
-    max-height: 100%;
-  }
-  
-  .footer__links__lista {
-    list-style: none;
-    display: flex;
-  } 
-  
-  .footer__links__elemento {
-    margin-right: 10vh;
-  } */
-  
-  /* .footer__paginas-lista a {
-    text-decoration: none;
-    color: $tenis-corporate;
-  } */
-  
- /*  .footer__rrss__lista {
-    list-style: none;
-    display: flex;
-  }
-  
-  .footer__rrss__elemento {
-    margin-right: 10vh;
-  } */
 
 .imagen-cabecera {
   height: 45vh;
@@ -494,3 +335,50 @@
   color: oklch(52.06% 0.15 160.94);
 }
 
+//QUERIES
+@media (max-width: 992px) {
+  .container__footer {
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    width: 100%;
+  }
+
+  .footer__links__elemento:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .footer__links {
+    margin-bottom: 1rem;
+  }
+
+  .container__form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .header__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banner .banner__highlight {
+    font-size: 1.5rem;
+  }
+
+  .container__participante__elemento {
+    width: calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container__participante__lista {
+    justify-content: center;
+  }
+
+  .container__participante__elemento {
+    width: calc(100% - 1.5rem);
+  }
+}
