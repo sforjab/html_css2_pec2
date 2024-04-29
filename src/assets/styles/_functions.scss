@@ -1,0 +1,13 @@
+@use "sass:color";
+
+@function invert-color($color) {
+  $red-value: color.red($color);
+  $green-value: color.green($color);
+  $blue-value: color.blue($color);
+
+  $inverted-red: 255 - $red-value;
+  $inverted-green: 255 - $green-value;
+  $inverted-blue: 255 - $blue-value;
+
+  @return rgb($inverted-red, $inverted-green, $inverted-blue);
+}

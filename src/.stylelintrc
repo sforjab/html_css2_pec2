@@ -10,6 +10,10 @@
        "declaration-block-no-duplicate-custom-properties": true,
        "no-duplicate-selectors": true,
        "comment-whitespace-inside": "always",
-       "comment-no-empty": true
+       "comment-no-empty": true,
+       "color-no-invalid-hex": true,
+       "unit-no-unknown": true,
+       "selector-type-no-unknown": true,
+       "shorthand-property-no-redundant-values": true
     }
 }

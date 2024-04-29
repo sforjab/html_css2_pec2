@@ -8,47 +8,47 @@
     </head>
     <body>
         <include src="./views/header.html"></include>
-        <div class="container mt-5 text-center">
+        <div class="container container-inscripcion mt-5 text-center">
             <div class="container__titulo"><h1 class="animate__animated animate__backInLeft">Formulario de inscripción</h1></div>
             <div id="liveAlertPlaceholder"></div>
             <form class="container__form mx-auto">
               <div class="row">
                 <div class="form-group mb-3">
                   <label for="dni">DNI</label>
-                  <input type="text" class="form-control" id="dni" name="dni">
+                  <input type="text" class="form-control" id="dni" name="dni" required>
                 </div>
                 <div class="form-group mb-3  col-md-6">
                   <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre">
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
                 <div class="form-group mb-3 col-md-6">
                   <label for="apellidos">Apellidos</label>
-                  <input type="text" class="form-control" id="apellidos" name="apellidos">
+                  <input type="text" class="form-control" id="apellidos" name="apellidos" required>
                 </div>
                 <div class="form-group mb-3 col-md-6">
                   <label for="localidad">Localidad</label>
-                  <input type="text" class="form-control" id="localidad" name="localidad">
+                  <input type="text" class="form-control" id="localidad" name="localidad" required>
                 </div>
                 <div class="form-group mb-3  col-md-6">
                   <label for="provincia">Provincia</label>
-                  <input type="text" class="form-control" id="provincia" name="provincia">
+                  <input type="text" class="form-control" id="provincia" name="provincia" required>
                 </div>
                 <div class="form-group mb-3  col-md-4">
                   <label for="fecha_nacimiento">Fecha Nac.</label>
-                  <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+                  <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
                 </div>
                 <div class="form-group mb-3  col-md-4">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" name="email">
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group mb-3  col-md-4">
                   <label for="email">Teléfono</label>
-                  <input type="tel" class="form-control" id="telefono" name="telefono">
+                  <input type="tel" class="form-control" id="telefono" name="telefono" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="profesion_cocina">¿Te dedicas o has dedicado profesionalmente a la cocina?</label>
                     <select class="form-select" id="profesion_cocina" name="profesion_cocina">
-                        <option selected disabled>Seleccione una opción...</option>
+                        <option selected>Seleccione una opción...</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                     </select>
@@ -56,7 +56,7 @@
                 <div class="form-group mb-3">
                   <label for="opciones">¿Cómo conociste el concurso?</label>
                   <select class="form-select" id="opciones" name="opciones">
-                      <option selected disabled>Seleccione una opción...</option>
+                      <option selected>Seleccione una opción...</option>
                       <option value="Internet">Internet</option>
                       <option value="Televisión">Televisión</option>
                       <option value="Radio">Radio</option>
@@ -64,7 +64,7 @@
                   </select>
                 </div>
               </div>
-              <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+              <button type="submit" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
             </form>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
