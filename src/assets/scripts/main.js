@@ -39,10 +39,20 @@ function alert(message, type) {
   alertPlaceholder.append(wrapper)
 }
 
-// Se comprueba si el botón de activación de la alerta está presente en la página actual
-if (alertTrigger) {
-  // Si el botón está presente, agrega un 'Event Listener' para mostrar la alerta al hacer clic
-  alertTrigger.addEventListener('click', function () {
-    alert('¡Enhorabuena! Te has inscrito con éxito.', 'success')
-  })
-}
+// Se obtiene el formulario
+var form = document.querySelector('.container__form');
+
+// Agregamos 'Event Listener' para escuchar el evento 'submit' del formulario
+form.addEventListener('submit', function (event) {
+  // Se evita el comportamiento predeterminado del formulario (enviar los datos)
+  event.preventDefault();
+  
+  // Se comprueba si el formulario es válido
+  if (form.checkValidity()) {
+    // Si el formulario es válido, se muestra la alerta
+    alert('¡Enhorabuena! Te has inscrito con éxito.', 'success');
+  } else {
+    // Si el formulario no es válido, no se muestra la alerta
+    console.log('El formulario no es válido');
+  }
+});
